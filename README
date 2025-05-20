@@ -1,0 +1,107 @@
+# 🚀 iOcean Site Vitrine — Recrutement
+
+Projet frontend réalisé avec **Next.js 15** et connecté à un backend **Strapi** pour la gestion des contenus (offres d'emploi, articles, etc.).
+
+## 📁 Structure du projet
+
+- `app/` — Routage App Router (Next.js)
+- `components/` — Composants UI (boutons, modales, etc.)
+- `lib/strapi.ts` — Fonctions de récupération des données depuis Strapi
+- `types/` — Définition des types TypeScript
+- `public/` — Images statiques
+
+## ⚙️ Installation
+
+### 1. Cloner le projet
+
+```bash
+git clone https://github.com/ton-utilisateur/nom-du-projet.git
+cd nom-du-projet
+```
+
+### 2. Installer les dépendances
+
+```bash
+npm install
+# ou
+yarn
+```
+
+### 3. Configurer les variables d’environnement
+
+Créer un fichier `.env.local` à la racine :
+
+```env
+STRAPI_URL=http://localhost:1337
+```
+
+> 🔁 `STRAPI_URL` correspond à l'URL de ton backend Strapi.
+
+---
+
+## ▶️ Lancer le projet
+
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
+Ouvre [http://localhost:3000](http://localhost:3000) pour visualiser le site.
+
+---
+
+## 🧠 Fonctionnalités
+
+- ✅ Liste dynamique des **offres d’emploi** (données depuis Strapi)
+- ✅ Animations d’apparition avec **Framer Motion**
+- ✅ Modale détaillée avec bouton **"Postuler"**
+- ✅ Formulaire de **candidature spontanée**
+- ✅ Données typées avec **TypeScript**
+- ✅ UI moderne avec **Tailwind CSS** + **shadcn/ui**
+
+---
+
+## 🛠 Backend : Strapi
+
+Le projet utilise un backend **Strapi** (auto-hébergé sur `http://localhost:1337`).
+
+### Collections utilisées :
+
+- `job-offers` (offres d'emploi)
+- `articles` (actualités)
+
+Pense à :
+
+1. Créer les collections depuis l’admin Strapi
+2. Ajouter des entrées et les publier
+3. Activer les permissions publiques pour les routes API concernées
+
+---
+
+## 🔐 Auth & Permissions (Strapi)
+
+- Aller dans **Settings > Users & Permissions > Roles > Public**
+- Activer les permissions `find` et `findOne` sur les collections utilisées (`job-offers`, `articles`, etc.)
+
+---
+
+## 🚀 Déploiement
+
+Ce projet peut être déployé sur [Vercel](https://vercel.com/) ou [Netlify](https://www.netlify.com/).  
+Assure-toi que `STRAPI_URL` est bien configuré dans tes variables d’environnement de production.
+
+---
+
+## 📚 Ressources utiles
+
+- [Documentation Next.js](https://nextjs.org/docs)
+- [Documentation Strapi](https://docs.strapi.io)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+
+---
+
+## 👥 Crédits
+
+Projet réalisé par Antoine Quendez pour la partie recrutement.
